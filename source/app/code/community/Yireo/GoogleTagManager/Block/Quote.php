@@ -33,8 +33,7 @@ class Yireo_GoogleTagManager_Block_Quote extends Yireo_GoogleTagManager_Block_De
         if (!empty($lastOrderId)) {
             return null;
         }
-        $quote = Mage::getModel('checkout/cart')->getQuote();
-        return $quote;
+        return Mage::getSingleton('checkout/cart')->getQuote();
     }
     /**
      * Return all quote items as array
